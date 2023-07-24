@@ -1,0 +1,73 @@
+.flask {
+    height: 150px;
+    width: 75px;
+    margin: 0 10px;
+    border: 1px solid #000;
+    border-radius: 20px 20px 37.5px 37.5px; /* Para dar a forma de um tubo de ensaio */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .flask:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -5px;
+    width: 85px;
+    height: 200px;
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0));
+    transform: rotate(-45deg);
+    transform-origin: top left;
+    pointer-events: none;
+  }
+  
+  .flask:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #000;
+  }
+  
+  .flask-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  
+  .flask-header h5 {
+    margin: 0;
+  }
+  
+  .flask-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .flask-container .flask {
+    height: 150px;
+    width: 75px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 20px 20px 37.5px 37.5px; /* Para dar a forma de um tubo de ensaio */
+  }
+  
+  .flask {
+    border: 2px solid rgb(150, 150, 150);
+  }
+  
+  .flasks-container {
+    margin-top: 50px;
+  }
+  
+  .flask:hover, 
+  .flask.selected {
+    border: 2px solid #ffc107;
+  }
+  

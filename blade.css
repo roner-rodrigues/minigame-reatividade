@@ -1,0 +1,47 @@
+.blade {
+    height: 150px;
+    width: 75px;
+    border: 1px solid #000;
+    margin: 0 10px;
+    border-radius: 2px 2px 20px 20px;
+}
+
+.blade-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.blade-header h5 {
+    margin: 0;
+}
+
+.blade-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blade-container .blade {
+    height: 150px;
+    width: 75px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 2px 2px 2px 2px;
+}
+
+.blade {
+    border: 2px solid rgb(150, 150, 150);
+}
+
+.blades-container {
+    margin-top: 50px;
+}
+
+.blade:hover, 
+.blade.selected {
+    border: 2px solid #ffc107;
+}
+
+  

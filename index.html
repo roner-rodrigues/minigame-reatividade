@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS ALCHIMIST</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="blade.css">
+  <link rel="stylesheet" href="flask.css">
+  <link rel="stylesheet" href="reaction-flask.css">
+  <link rel="stylesheet" href="elements.css">
+
+  <!-- <link rel="stylesheet" href="mamata.css"> -->
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Custom JS -->
+  <script src="main.js"></script>
+  <script src="reaction-flask.js"></script>
+  <!-- Custom Icon -->
+  <link rel="shortcut icon" href="wizard.png" type="image/x-icon">
+</head>
+
+<body>
+  <!-- Top Navbar -->
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">
+      <img src="atom.gif" width="30" height="30" class="d-inline-block align-top" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Configurações</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sair</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Side Info navbar  -->
+  <div class="sidenav d-flex flex-column justify-content-start align-items-start p-3">
+    <div class="portrait-wrapper">
+      <img class="side-info-portrait portrait fixed-size-img" src="elements/aluminium.png" alt="">
+    </div>
+    <div class="element-info">
+      <h2 class="element-name mb-2">Name</h2>
+      <p class="mb-1">Atomic Mass: <span></span></p>
+      <p class="mb-1">Atomic Number: <span></span></p>
+      <p class="mb-1">Electron Configuration: <span></span></p>
+      <p class="mb-1">Category: <span></span></p>
+    </div>
+  </div>
+
+
+  <!-- Main Content -->
+  <div class="main">
+    <h2>Teste a reatividade dos metais abaixo :</h2>
+    <div class="game-container">
+       
+    <!-- Radio Buttons -->
+    <div class="game-container align-items-center container-elements">
+      <div class="row justify-content-center">
+          <div class="col-md-12 text-center mb-3">
+              <h5 class="d-inline">Materiais</h5>
+              <select id="element-select" class="form-select d-inline" style="width: auto;">
+                <option value="">Todos</option>
+                <option value="">Metais alcalinos</option>
+                <option value="">Metais nobres</option>
+              </select>
+          </div>
+      </div>
+      <div class="row justify-content-center">
+          <div class="lista-metais form-group d-flex text-center">
+          </div>
+      </div>
+    </div>
+
+    <!-- Recipientes -->
+    <div class="blades-container container-fluid">
+      <div class="row justify-content-center">
+        <!-- Lâmina de metal -->
+        <div class="col-md-4 text-center">
+          <div class="blade-container">
+            <div class="blade-header">
+              <h5>Lâmina</h5>
+            </div>
+            <div id="blade" class="blade recipient">
+            </div>
+          </div>
+        </div>
+        
+        <!-- Frasco de Solução -->
+        <div class="col-md-4 text-center">
+          <div class="flask-container">
+            <div class="flask-header">
+              <h5>Solução</h5>
+            </div>
+            <div id="flask" class="flask recipient">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frasco de Reação -->
+      <div class="row justify-content-center mt-5">
+        <button class="btn btn-primary btn-md btn-block reaction-btn " id="btn-mix-2">Testar reação</button>
+        <div class="col-12 mt-5">
+          <div id="reaction-flask" class="mx-auto">
+            <div id="reaction-liquid" class="recipient">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="div-buttons row justify-content-center">
+        <div class="col-md-3 text-center">
+          <button class="btn btn-warning btn-lg btn-block inverse-btn" id="btn-mix">Inverter elementos</button>
+        </div>
+        <div class="col-md-2 text-center">
+          <button class="btn btn-secondary btn-lg btn-block" id="btn-reset">Reset</button>
+        </div>
+      </div>
+
+      <div class="div-calculations row justify-content-center" hidden>
+        <div class="col-md-12 text-center">
+          <h5>Cálculos realizados</h5>
+      </div>
+    </div>    
+  </div>
+  </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="reactionModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Resultado da reação</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <span id="modal-parameter"></span>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

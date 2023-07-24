@@ -1,0 +1,86 @@
+[
+{
+    "id": "lithium",
+    "reactLevel": "11",
+    "nome": "Lítio",
+    "imgSrc": "elements/lithium.png",
+    "altText": "Lítio"
+},
+{
+    "id": "sodium",
+    "reactLevel": "10",
+    "nome": "Sódio",
+    "imgSrc": "elements/sodium.png",
+    "altText": "Sódio"
+},
+{
+    "id": "potassium",
+    "reactLevel": "9",
+    "nome": "Potássio",
+    "imgSrc": "elements/potassium.png",
+    "altText": "Potássio"
+},
+{
+    "id": "calcium",
+    "reactLevel": "8",
+    "nome": "Cálcio",
+    "imgSrc": "elements/calcium.png",
+    "altText": "Cálcio"
+},
+{
+    "id": "magnesium",
+    "reactLevel": "7",
+    "nome": "Magnésio",
+    "imgSrc": "elements/magnesium.png",
+    "altText": "Magnésio"
+},
+{
+    "id": "aluminum",
+    "reactLevel": "6",
+    "nome": "Alumínio",
+    "imgSrc": "elements/aluminium.png",
+    "altText": "Alumínio"
+},
+{
+    "id": "zinc",
+    "reactLevel": "5",
+    "nome": "Zinco",
+    "imgSrc": "elements/zinc.png",
+    "altText": "Zinco"
+},
+{
+    "id": "iron",
+    "reactLevel": "4",
+    "nome": "Ferro",
+    "imgSrc": "elements/iron.png",
+    "altText": "Ferro"
+},
+{
+    "id": "lead",
+    "reactLevel": "3",
+    "nome": "Chumbo",
+    "imgSrc": "elements/lead.png",
+    "altText": "Chumbo"
+},
+{
+    "id": "copper",
+    "reactLevel": "2",
+    "nome": "Cobre",
+    "imgSrc": "elements/copper.png",
+    "altText": "Cobre"
+},
+{
+    "id": "silver",
+    "reactLevel": "1",
+    "nome": "Prata",
+    "imgSrc": "elements/silver.png",
+    "altText": "Prata"
+},
+{
+    "id": "gold",
+    "reactLevel": "0",
+    "nome": "Ouro",
+    "imgSrc": "elements/gold.png",
+    "altText": "Ouro"
+}
+]  
